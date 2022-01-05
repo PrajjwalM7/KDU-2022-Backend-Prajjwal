@@ -3,7 +3,14 @@ import java.io.*;
 public class Question_2 {
     public static void printNumbersDivisibleByThree( int n ) {
         for( int i = 1; i <= n; i++ ) {
-            if( i % 3 == 0) {
+            int sum = 0;
+            int d = i;
+            while(d > 0) {
+                int r = d % 10;
+                sum += r;
+                d = d / 10;
+            }
+            if( sum % 3 == 0) {
                 System.out.println(i);
             }
         }
