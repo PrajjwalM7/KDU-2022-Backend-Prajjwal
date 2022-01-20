@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="vehicle" class="com.kd.di.spring.xml.Vehicle" scope="singleton">
+        <property name="tyres" value="4"/>
+        <property name="car" ref="bmw"/>
+    </bean>
+
+    <bean id="bmw" class="com.kd.di.spring.xml.Car" scope="prototype" init-method="init" destroy-method="destroy">
+        <constructor-arg name="name" value="BMW G7"/>
+    </bean>
+    <bean id="bmw2" class="com.kd.di.spring.xml.Car" scope="prototype" init-method="init" destroy-method="destroy">
+        <constructor-arg name="name" value="BMW A4"/>
+    </bean>
+</beans>
