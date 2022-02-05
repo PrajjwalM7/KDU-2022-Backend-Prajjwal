@@ -1,0 +1,8 @@
+public enum Crypto_Statistics {
+    COIN_DETAILS,
+    CRYPTY_FIFTY,
+    TRADER_PORTFOLIO,
+    TRADER_SUMMARY,
+    WORLD_TRADER_RANK,
+    SHOW_MENU
+}
