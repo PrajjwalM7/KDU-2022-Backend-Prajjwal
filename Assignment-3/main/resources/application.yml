@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: assignment_3_backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/flight_data
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    jpa:
+      hibernate:
+        ddl-auto: none
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+server:
+  port: 8081
